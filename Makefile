@@ -1,5 +1,5 @@
 # source files in this project 
-PROJECT_NAME=assg05
+PROJECT_NAME=assg06
 
 assg_src = 
 
