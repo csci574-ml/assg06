@@ -8,7 +8,7 @@ def task_1_load_data():
     are required to use the fetch_openml() function to retrieve this
     dataset.  In addition you will need to do some work to encode the
     labels and reshape the data.  The assignment expects that the X
-    input fetures are returend with 19020 samples of 11 features, and that
+    input features are returned with 19020 samples of 11 features, and that
     the y labels are encoded correctly for binary classification.
 
     Params
@@ -38,7 +38,7 @@ def train_val_test_split(data, target, train_size=10000, val_size=4510, random_s
     This function assumes that the input data is large enough to perform 
     the indicated 3 way split, no error checking is done or required.
 
-    The random_state should be set for both calls to sklearns train_test_split().
+    The random_state should be set for both calls to sklearn's train_test_split().
     If not the split will not be reproducible as the behavior in sklearn is to
     use a different seed each time if not specified.
 
@@ -52,7 +52,7 @@ def train_val_test_split(data, target, train_size=10000, val_size=4510, random_s
     val_size - The number of samples that should end up in the validation data
        set and in the validation target labels
     random_state - A value to set the random seed to before performing
-       split, defaults to 42 if not specified.  Allows for reproducable splits
+       split, defaults to 42 if not specified.  Allows for reproducible splits
        to be done by this function.
 
     Returns
@@ -85,11 +85,11 @@ def task_3_voting_ensemble(X, y, voting='hard'):
     voting ensemble should be fit on the given data and labels and the fitted
     ensemble returned from this function.
     
-    Paramters
+    Parameters
     ---------
     X - Data / features to train and fit the ensemble model with.
     y - Labels / targets for a binary classification task expected by this task
-    voting - A string that should specifiy either 'hard' or 'soft' to be used
+    voting - A string that should specify either 'hard' or 'soft' to be used
        when creating the voting ensemble that is returned from this function
       
     Returns
@@ -108,7 +108,7 @@ def task_4_bag_of_trees_ensemble(X, y):
     the meta-parameters to get the best performance accuracy you can on
     your classifier.
     
-    Paramters
+    Parameters
     ---------
     X - Data / features to train and fit the ensemble model with.
     y - Labels / targets for a binary classification task expected by this task
@@ -135,7 +135,7 @@ def create_stacked_data(voting_ensemble, X):
 
     Parameters
     ----------
-    voting_ensemble - Should be a VotingClassifer from scikit-learn that has
+    voting_ensemble - Should be a VotingClassifier from scikit-learn that has
       already been trained and fitted.  We will use the estimators in the
       voting ensemble as base estimators for a stack ensemble.
     X - The data that we should generate predictions for from each of the
@@ -168,7 +168,7 @@ def task_6_stacked_ensemble(X_train, y_train, X_val, y_val):
     generate and stack a new set of data for training and fitting
     using the validation data set.
     
-    Paramters
+    Parameters
     ---------
     X_train, y_train - The training data set, should be used to fit the base
       estimators of the stack.
